@@ -11,7 +11,7 @@ public class Pedido {
 
     //Atributos:
     private String idPedido;
-    private String estado;  // Pendiente - Completado
+    private String estado;  // Pendiente - Completado - Cancelado
     private List<ItemPedido> listaItems;
 
     //Propiedades:
