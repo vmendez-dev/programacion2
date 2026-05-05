@@ -17,4 +17,8 @@ public class ItemPedido {
 
     public int getCantidadSolicitada() { return cantidadSolicitada; }
 
+    //Métodos:
+    public double calcularSubtotal(){
+        return producto.getPrecio() * cantidadSolicitada;
+    }
 }
