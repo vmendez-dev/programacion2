@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        //---------EJERCICIOS FOR---------
 
         // 1) imprimir los números del 1 al 10.
 //        for (int i = 1; i < 11; i++) {
@@ -27,8 +28,8 @@ public class Main {
 //        }
 //        System.out.println(suma);
 
+        //---------EJERCICIOS WHILE---------
 
-        //WHILE:
         // 1) imprimir en cuenta regresiva de 5 hasta 1 y ¡Despuegue!
 //        int cuenta=5;
 //        while(cuenta>0){
@@ -59,6 +60,57 @@ public class Main {
 //            numeroUsuario=sc.nextInt();
 //        }
 //        System.out.println("Correcto, haz acertado el número!");
+
+        //---------EJERCICIOS DO-WHILE---------
+        //1) Menú Simple: Imprime un menú de opciones al menos una vez, y luego pregunta si el usuario quiere verlo de nuevo.
+        // El bucle continúa si el usuario lo desea.
+
+//        String respuesta;
+//        do{
+//            System.out.println("===== MENÚ =====");
+//            System.out.println("1. Ver productos");
+//            System.out.println("2. Agregar producto");
+//            System.out.println("3. Salir");
+//            System.out.println("================");
+//
+//            System.out.print("¿Deseas ver el menú nuevamente? SI/NO: ");
+//            respuesta=sc.nextLine().toLowerCase();
+//        }while(respuesta.equals("si"));
+
+
+        //2) Solicitar Número Positivo: Pide al usuario que ingrese un número,
+        // y sigue pidiéndolo hasta que ingrese un número positivo.
+
+//        int numero;
+//        do {
+//            System.out.print("Ingrese un número: ");
+//            numero=sc.nextInt();
+//        }while(numero<=0);
+//
+//        System.out.println("Número positivo ingresado: "+numero);
+
+
+        //3) Contador Mínimo: Imprime números del 1 al 3. Asegura que al menos el 1 se imprima,
+        // incluso si la condición del while se cumple desde el principio.
+
+//        int contador=1;
+//        do {
+//            System.out.println(contador);
+//            contador++;
+//        }while(contador<=3);
+
+
+        //---------EJERCICIO MIXTO---------
+        // -Tablas de Multiplicar (del 1 al 5): Usa un bucle externo (for) para iterar por las tablas del 1 al 5,
+        // y un bucle interno (for, while o do-while) para calcular e imprimir cada multiplicación (del 1 al 10).
+
+//        for (int i = 1; i <= 5; i++) {
+//            System.out.println("==== TABLA DEL " + i + " ====");
+//
+//            for (int j = 1; j <= 10; j++) {
+//                System.out.println(i + " x " + j + " = " + (i * j));
+//            }
+//        }
 
     }
 }
