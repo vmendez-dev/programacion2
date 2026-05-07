@@ -17,4 +17,9 @@ public class Producto {
     public double getPrecio() { return precio; }
 
     public int getCantidadDisponible() { return cantidadDisponible; }
+
+    //Métodos:
+    public void reducirStock(int cantidad){
+        cantidadDisponible-=cantidad;
+    }
 }
