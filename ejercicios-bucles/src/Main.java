@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         //---------EJERCICIOS FOR---------
 
         // 1) imprimir los números del 1 al 10.
