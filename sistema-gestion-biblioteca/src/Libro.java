@@ -16,5 +16,23 @@ public class Libro {
     private boolean disponible;
 
     //Métodos:
+    public String getTitulo(){
+        return titulo;
+    }
 
+    public Autor getAutor() {
+        return autor;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public int getAnioPublicacion() {
+        return anioPublicacion;
+    }
+
+    public boolean isDisponible() {
+        return disponible;
+    }
 }
