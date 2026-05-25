@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class Usuario {
@@ -24,5 +25,20 @@ public class Usuario {
 
     public ArrayList<Libro> getLibrosPrestados() {
         return librosPrestados;
+    }
+    public void agregarLibroPrestado(Libro libro){
+        librosPrestados.add(libro);
+    }
+
+    public void mostrarLibrosPrestados() {
+        if (librosPrestados.isEmpty())
+            System.out.println("El usuario no tiene libros prestados.");
+        else {
+            System.out.println("====Libros Prestados====");
+            for (Libro item : librosPrestados) {
+                System.out.println("- " + item.getTitulo() + " | Autor: " + item.getAutor().getNombre());
+            }
+        }
+
     }
 }

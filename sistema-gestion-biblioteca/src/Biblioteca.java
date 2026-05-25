@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Biblioteca {
     //Constructor:
@@ -37,5 +38,48 @@ public class Biblioteca {
         return resultadoLibro;
     }
 
+    public void prestarLibro(String isbn, Usuario usuario) {
+        Scanner sc = new Scanner(System.in);
+        boolean prestado = false;
+
+        do {
+            boolean encontrado = false;
+
+            for (Libro item : libros) {
+                if (Objects.equals(item.getIsbn(), isbn)) {
+                    encontrado=true;
+                    if (item.isDisponible()) {
+                        usuario.agregarLibroPrestado(item);
+                        item.setDisponible(false);
+
+                        System.out.println("Libro prestado correctamente: " + item.getTitulo());
+                        prestado = true;
+                        break;
+                    } else {
+                        System.out.println("El libro "+item.getTitulo()+" no se encuentra disponible.");
+                    }
+                    break;
+
+                }
+            }
+            if (!prestado) {
+                if(!encontrado)
+                    System.out.print("No existe un libro con el ISBN: " + isbn);
+
+                System.out.print("¿Desea intentar con otro ISBN? (si/no): ");
+                String respuesta = sc.nextLine();
+
+                if(respuesta.equalsIgnoreCase("si")){
+                    System.out.print("Ingrese otro ISBN: ");
+                    isbn = sc.nextLine();
+                    
+                } else{
+                    System.out.println("Préstamo cancelado.");
+                    break;
+                }
+            }
+
+        } while (!prestado);
+    }
 
 }
